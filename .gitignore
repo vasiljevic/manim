@@ -20,6 +20,7 @@ media
 manim.sublime-project
 manim.sublime-workspace
 .eggs/
+*.egg-info/
 build/
 dist/
 manim.egg-info/

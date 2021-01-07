@@ -34,6 +34,7 @@ class GraphScene(Scene):
         "x_leftmost_tick": None,  # Change if different from x_min
         "x_labeled_nums": None,
         "x_axis_label": "$x$",
+        "x_tick_size": NumberLine.CONFIG["tick_size"],
         "y_min": -1,
         "y_max": 10,
         "y_axis_height": 6,
@@ -41,6 +42,7 @@ class GraphScene(Scene):
         "y_bottom_tick": None,  # Change if different from y_min
         "y_labeled_nums": None,
         "y_axis_label": "$y$",
+        "y_tick_size": NumberLine.CONFIG["tick_size"],
         "axes_color": GREY,
         "graph_origin": 2.5 * DOWN + 4 * LEFT,
         "exclude_zero_label": True,
@@ -86,6 +88,7 @@ class GraphScene(Scene):
             x_max=self.x_max,
             unit_size=self.space_unit_to_x,
             tick_frequency=self.x_tick_frequency,
+            tick_size = self.x_tick_size,
             leftmost_tick=self.x_leftmost_tick,
             numbers_with_elongated_ticks=self.x_labeled_nums,
             color=self.axes_color
@@ -117,6 +120,7 @@ class GraphScene(Scene):
             x_max=self.y_max,
             unit_size=self.space_unit_to_y,
             tick_frequency=self.y_tick_frequency,
+            tick_size = self.y_tick_size,
             leftmost_tick=self.y_bottom_tick,
             numbers_with_elongated_ticks=self.y_labeled_nums,
             color=self.axes_color,
