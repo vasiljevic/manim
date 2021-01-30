@@ -98,7 +98,7 @@ class NumberLine(Line):
         u = -1 if self.include_tip else 1
         return np.arange(
             self.leftmost_tick,
-            self.x_max + u * self.tick_frequency / 2,
+            self.x_max, # + u * self.tick_frequency / 2,
             self.tick_frequency
         )
 
